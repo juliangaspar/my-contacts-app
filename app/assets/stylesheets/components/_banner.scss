@@ -1,0 +1,26 @@
+.banner {
+  background-image: url(https://factorialhr.com/images/factorial-open-graph.png);
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+}
+
+.banner h1 {
+  color: $blue;
+  opacity: .9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 16px;
+  color: $blue;
+  opacity: .9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.word {
+  color: $ligth-red;
+  font-weight: bold;
+}

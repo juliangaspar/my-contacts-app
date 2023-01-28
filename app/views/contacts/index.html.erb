@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="cards">
+    <% @contacts.each do |contact| %>
+        <div class="contact-card">
+          <%= contact.full_name %>
+          <%= contact.contact_email %>
+          <%= contact.phone_number %>
+        </div>
+    <% end %>
+  </div>
+</div>
