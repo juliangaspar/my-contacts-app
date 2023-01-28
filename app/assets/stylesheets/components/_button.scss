@@ -1,0 +1,13 @@
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: $red;
+  transition: background 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-flat:hover {
+  background: $ligth-red;
+  color: white;
+}
