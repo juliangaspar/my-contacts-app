@@ -2,6 +2,6 @@
   <div class="container-fluid">
     <h1>Contact Management<br><span class="word">made simple</span></h1>
     <p>Get your agenda organized using ContactApp</p>
-    <%= link_to "Sign Up", new_user_session_path, class: "btn btn-flat" %>
+    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-flat" unless user_signed_in?  %>
   </div>
 </div>
