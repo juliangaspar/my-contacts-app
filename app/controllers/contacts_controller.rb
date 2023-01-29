@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  before_action :set_contact, only: %w[show edit update destroy]
+  before_action :set_contact, only: %i[show edit update destroy versions]
 
   def index
     @contacts = current_user.contacts
@@ -35,6 +35,10 @@ class ContactsController < ApplicationController
   def destroy
     @contact.destroy
     redirect_to contacts_url, notice: "Successfully destroyed contact."
+  end
+
+  def versions
+    @contacts = @contact.versions
   end
 
   private

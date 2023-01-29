@@ -19,12 +19,12 @@ puts 'Seeding db 🌱'
       last_name: Faker::Name.last_name,
       contact_email: Faker::Internet.unique.email,
       phone_number: Faker::PhoneNumber.phone_number,
-      address: Faker::Address.full_address,
+      address: Faker::Address.street_address,
       profile_picture: Faker::Avatar.image,
       user_id: user.id
   )
   end
-  puts "User with id: #{user.id} has been created with 5 contacts 🤓"
+  puts "User with id: #{user.id} has been created with 9 contacts 🤓"
 end
 
 puts 'Finished ✅'

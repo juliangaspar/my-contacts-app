@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-top: 6%;
 }
 
 // Smallest device
@@ -40,13 +41,20 @@
 }
 
 .contact-card {
-  height: 180px;
+  overflow: hidden;
+  height: 200px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.contact-card img {
+  overflow: hidden;
+  height: 100%;
+  width: 180px;
+  object-fit: cover;
+  background-position: center;
 }
