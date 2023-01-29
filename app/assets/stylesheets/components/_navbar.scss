@@ -15,4 +15,21 @@
 
 .navbar-model .navbar-brand img {
   width: 40px;
+  border-radius: 50%;
+}
+
+#navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-items i {
+  margin-right: 16px;
+  color: $blue;
+  transition: background 0.3s ease;
+}
+
+.nav-items i:hover {
+  opacity: .6;
 }
