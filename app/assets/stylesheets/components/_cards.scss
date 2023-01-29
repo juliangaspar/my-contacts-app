@@ -41,20 +41,26 @@
 }
 
 .contact-card {
-  overflow: hidden;
   height: 200px;
   display: flex;
-  color: white;
-  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $blue;
+  font-size: 10px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.contact-card img {
-  overflow: hidden;
-  height: 100%;
-  width: 180px;
-  object-fit: cover;
-  background-position: center;
+.contact-card:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.contact-image {
+  padding-top: 6px;
+}
+
+.contact-info {
+  text-align: center;
 }

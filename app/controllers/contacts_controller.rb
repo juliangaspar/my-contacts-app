@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
   before_action :set_contact, only: %i[show edit update destroy versions]
 
   def index
-    @contacts = current_user.contacts
+    @contacts = current_user.contacts.order(first_name: :asc, last_name: :asc)
   end
 
   def show
@@ -44,7 +44,7 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:first_name, :last_name, :contact_email, :phone_number)
+    params.require(:contact).permit(:first_name, :last_name, :contact_email, :phone_number, :job_title, :company)
   end
 
   def set_contact

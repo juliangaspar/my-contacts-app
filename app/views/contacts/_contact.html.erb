@@ -1,11 +1,11 @@
 <div class="contact-card">
-  <div class="contact-picture">
-    <%= image_tag(contact.profile_picture) %>
+  <div class="contact-image">
+    <%= image_tag(contact.profile_picture, class: "avatar-large") %>
   </div>
   <div class="contact-info">
-    <h4><%= contact.full_name %></h3>
-    <p><%= contact.contact_email %></p>
-    <p><%= contact.phone_number %></p>
-    <p><%= contact.address %></p>
+    <h4><%= contact.full_name %></h4>
+    <p><%= contact.job_title %> @ <%= contact.company %></p>
+    <p><i class="fa-solid fa-envelope fa-lg"></i> <%= contact.contact_email %></p>
+    <p><i class="fa-solid fa-phone fa-lg"></i> <%= contact.phone_number %></p>
   </div>
 </div>
