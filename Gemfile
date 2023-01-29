@@ -48,6 +48,9 @@ gem "sassc-rails"
 # Users and authentication
 gem "devise"
 
+# Track changes to models
+gem 'paper_trail'
+
 # Fake data for seeds
 gem "faker"
 
