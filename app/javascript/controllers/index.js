@@ -4,11 +4,5 @@
 
 import { application } from "./application"
 
-import ControllerController from "./controller_controller"
-application.register("controller", ControllerController)
-
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
-
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)

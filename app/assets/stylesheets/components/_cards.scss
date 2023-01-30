@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-top: 6%;
+  margin-bottom: 0.5rem;
 }
 
 // Smallest device
@@ -63,4 +64,14 @@
 
 .contact-info {
   text-align: center;
+}
+
+.contact-card h4 {
+  margin-top: 0.5rem;
+}
+
+.contact-card p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 12px;
 }
