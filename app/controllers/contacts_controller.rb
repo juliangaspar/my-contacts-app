@@ -35,7 +35,7 @@ class ContactsController < ApplicationController
 
   def destroy
     @contact.destroy
-    redirect_to contacts_url, notice: "Successfully destroyed contact."
+    redirect_to contacts_path, notice: "Successfully destroyed contact."
   end
 
   def versions
