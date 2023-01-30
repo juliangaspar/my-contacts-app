@@ -13,7 +13,7 @@ puts 'Seeding db 🌱'
     user_picture: Faker::Avatar.image,
     password: "123456"
   )
-  9.times do
+  18.times do
     Contact.create(
       first_name: Faker::Name.first_name,
       last_name: Faker::Name.last_name,
@@ -26,7 +26,7 @@ puts 'Seeding db 🌱'
       user_id: user.id
     )
   end
-  puts "User with id: #{user.id} has been created with 9 contacts 🤓"
+  puts "User with id: #{user.id} has been created with 18 contacts 🤓"
 end
 
 puts 'Finished ✅'

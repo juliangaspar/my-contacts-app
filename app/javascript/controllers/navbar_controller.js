@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["navbar"]
 
   updateNavbar() {
-    if (window.scrollY >= window.innerHeight) {
+    if (window.scrollY >= 200) {
       this.element.classList.add("navbar-model-white")
     } else {
       this.element.classList.remove("navbar-model-white")
