@@ -1,7 +1,5 @@
 <div class="container-fluid">
   <div class="cards">
-    <% @contacts.each do |contact| %>
-      <%= render partial: 'contact', locals: { contact: contact } %>
-    <% end %>
+      <%= render partial: 'contacts', locals: { contact: @contacts } %>
   </div>
 </div>
