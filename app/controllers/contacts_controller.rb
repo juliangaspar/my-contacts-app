@@ -10,12 +10,13 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
+    @user = current_user
   end
 
   def create
-    @contact = current_user.contacts..new(contact_params)
+    @contact = current_user.contacts.new(contact_params)
     if @contact.save
-      redirect_to @contact, notice: "Successfully created contact."
+      redirect_to contacts_path, notice: "Contact successfully created."
     else
       render :new
     end
@@ -26,7 +27,7 @@ class ContactsController < ApplicationController
 
   def update
     if @contact.update(contact_params)
-      redirect_to @contact, notice: "Successfully updated contact."
+      redirect_to contacts_path, notice: "Contact successfully updated."
     else
       render 'edit'
     end

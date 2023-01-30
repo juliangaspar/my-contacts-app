@@ -1,6 +1,10 @@
 <div class="contact-card">
   <div class="contact-image">
+    <% if contact.profile_picture.present? %>
     <%= image_tag(contact.profile_picture, class: "avatar-large") %>
+    <% else %>
+    <%= image_tag('factorial.png', class: "avatar-large") %>
+    <% end %>
   </div>
   <div class="contact-info">
     <h4><%= contact.full_name %></h4>
