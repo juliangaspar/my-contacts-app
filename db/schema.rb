@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_29_131038) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_30_100427) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,6 +26,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_29_131038) do
     t.datetime "updated_at", null: false
     t.string "job_title"
     t.string "company"
+    t.text "previous_state"
+    t.integer "updated_by"
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
@@ -51,6 +53,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_29_131038) do
     t.string "whodunnit"
     t.text "object"
     t.datetime "created_at"
+    t.text "object_changes"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
 
