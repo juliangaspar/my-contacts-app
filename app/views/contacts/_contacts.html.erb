@@ -22,7 +22,7 @@
           </div>
           <div class="contact-actions">
             <%= link_to "Edit", edit_contact_path(contact), class: "btn btn-primary m-1" %>
-            <%= link_to "Delete", contact, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger m-1" %>
+            <%= link_to "Delete", contact_path(contact), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger m-1" %>
           </div>
       </div>
     </div>

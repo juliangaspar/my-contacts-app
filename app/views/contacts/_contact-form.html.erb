@@ -1,15 +1,31 @@
-<%= simple_form_for (@contact) do |f| %>
-    <div class= "form-inputs">
-      <%= f.input :first_name, required: true %>
-      <%= f.input :last_name, requred: true %>
-      <%= f.input :job_title %>
-      <%= f.input :company %>
-      <%= f.input :contact_email, required: true %>
-      <%= f.input :phone_number, required: true %>
-      <%= f.input :profile_picture, as: :file %>
-    </div>
-    <div class="form-actions">
-      <%= f.button :submit, "Add", { class: "btn btn-flat" } %>
-    </div>
+<%= simple_form_for(@contact) do |f| %>
+  <%= f.error_notification %>
+  <div class= "form-inputs">
+    <%= f.input :first_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "first name" } %>
+    <%= f.input :last_name,
+                requred: true,
+                autofocus: true,
+                input_html: { autocomplete: "last name" } %>
+    <%= f.input :job_title,
+                autofocus: true,
+                input_html: { autocomplete: "job title" } %>
+    <%= f.input :company,
+                autofocus: true,
+                input_html: { autocomplete: "company" } %>
+    <%= f.input :contact_email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" } %>
+    <%= f.input :phone_number,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "phone number" } %>
+    <%= f.input :profile_picture, as: :file %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, "Submit", { class: "btn btn-flat" } %>
+  </div>
 <% end %>
-

@@ -1,8 +1,9 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-4">
-        <h2>Log in</h2>
+<div class="container my-5">
+  <div class="form-container">
+    <div class="form-card">
+        <h2 class="form-title">Log in</h2>
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+          <%= f.error_notification %>
           <div class="form-inputs">
             <%= f.input :email,
                         required: false,
@@ -15,10 +16,10 @@
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "Log in" %>
+            <%= f.button :submit, "Log in", class: "btn btn-flat" %>
+            <%= link_to "Register now", new_user_registration_path(@user), class: "btn btn-link" %></p>
           </div>
         <% end %>
-        <%= render "devise/shared/links" %>
     </div>
   </div>
 </div>
