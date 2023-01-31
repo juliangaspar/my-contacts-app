@@ -1,17 +1,30 @@
 <% @contacts.each do |contact| %>
   <div class="contact-card">
-    <div class="contact-image">
-      <% if contact.profile_picture.present? %>
-      <%= image_tag(contact.profile_picture, class: "avatar-large") %>
-      <% else %>
-      <%= image_tag('factorial.png', class: "avatar-large") %>
-      <% end %>
-    </div>
-    <div class="contact-info">
-      <h4><%= contact.full_name %></h4>
-      <p><%= contact.job_title %> @ <%= contact.company %></p>
-      <p><i class="fa-solid fa-envelope fa-lg"></i> <%= contact.contact_email %></p>
-      <p><i class="fa-solid fa-phone fa-lg"></i> <%= contact.phone_number %></p>
+    <div class="contact-card-inner">
+      <div class="contact-card-front">
+        <div class="contact-image">
+          <% if contact.profile_picture.present? %>
+          <%= image_tag(contact.profile_picture, class: "avatar-large") %>
+          <% else %>
+          <%= image_tag('https://media.licdn.com/dms/image/C4E0BAQGufA924UNBfQ/company-logo_200_200/0/1634495502289?e=1683158400&v=beta&t=51Me7YH_wU8sQOyYQO7zXh-t0aOFZ0RSkYG7AVsLnPY', class: "avatar-large") %>
+          <% end %>
+        </div>
+        <div class="contact-info">
+          <h4><%= contact.full_name %></h4>
+          <p><%= contact.job_title %> @ <%= contact.company %></p>
+          <p><i class="fa-solid fa-envelope fa-lg"></i> <%= contact.contact_email %></p>
+          <p><i class="fa-solid fa-phone fa-lg"></i> <%= contact.phone_number %></p>
+        </div>
+      </div>
+      <div class="contact-card-back">
+          <div class="contact-versions">
+            <%= render partial: "versions", locals: { contact: contact } %>
+          </div>
+          <div class="contact-actions">
+            <%= link_to "Edit", edit_contact_path(contact), class: "btn btn-primary m-1" %>
+            <%= link_to "Delete", contact, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger m-1" %>
+          </div>
+      </div>
     </div>
   </div>
 <% end %>

@@ -1,0 +1,22 @@
+<div class="table-container">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">Event</th>
+      <th scope="col">Date</th>
+      <th scope="col">Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% contact.versions.each do |version| %>
+      <tr>
+        <th scope="row"><%= version.index %></th>
+        <td><%= version.event.humanize %>d</td>
+        <td><%= version.created_at.strftime("%a, %b %e at %l:%M %p") %></td>
+        <td><%= version.whodunnit.to_i == current_user.id ? "Current user" : "Other" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
