@@ -5,9 +5,15 @@
   background: $brigth-red;
   transition: background 0.3s ease;
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 .btn-flat:hover {
   background: $red;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #3C3C5A;
   color: white;
 }
