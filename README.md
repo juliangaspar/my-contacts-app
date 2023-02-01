@@ -43,6 +43,4 @@ This is a Ruby on Rails app for performing CRUD (Create, Read, Update, and Delet
 
 4. Submit a pull request
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE)

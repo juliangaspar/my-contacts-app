@@ -111,3 +111,13 @@
   align-items: center;
   text-decoration: none;
 }
+
+.contact-actions .btn {
+  border-radius: 6px;
+  margin: 0 0.5rem;
+  color: $white;
+}
+
+.contact-actions .btn-:hover {
+  color: $white;
+}
