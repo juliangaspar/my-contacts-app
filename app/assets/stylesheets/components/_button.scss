@@ -17,3 +17,22 @@
   background: #3C3C5A;
   color: white;
 }
+
+.btn-ghost {
+  color: $green;
+  border: 1px solid $green;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  color: $green;
+  opacity: 1;
+}
+
+.btn-close {
+  color: $white
+}
