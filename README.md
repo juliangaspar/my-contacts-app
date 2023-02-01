@@ -1,24 +1,48 @@
-# README
+# ContactsApp 💻
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails app for performing CRUD (Create, Read, Update, and Delete) actions on contacts. It uses the Devise gem for authentication and PostgreSQL database for storage.
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+- Ruby 2.6.5 or later
+- Rails 6.0.3 or later
+- PostgreSQL 12 or later
 
-* System dependencies
+## Installation
 
-* Configuration
+1. Clone the repository:
 
-* Database creation
+`git clone` git@github.com:juliangaspar/my-contacts-app.git
 
-* Database initialization
+2. Install the dependencies:
 
-* How to run the test suite
+`bundle install`
+`yarn install`
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Create, migrate a seed the database:
 
-* Deployment instructions
+`rails db:create
+ rails db:migrate
+ rails db:seed`
 
-* ...
+ 4. Start the server
+
+`rails server` and go to your [localhost:3000](http://localhost:3000) | Also run `yarn build --watch`
+
+## Usage
+
+- Sign up or log in to your account. Check `rails c` for seeded Users with contacts.
+
+## Contributing
+
+1. Fork the repository
+
+2. Create your feature branch
+
+3. Commit and push your changes to the branch
+
+4. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE)
