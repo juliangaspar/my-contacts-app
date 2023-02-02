@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import FlipCardController from "./flip_card_controller"
+application.register("flip-card", FlipCardController)
+
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
