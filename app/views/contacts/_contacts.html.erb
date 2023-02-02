@@ -1,7 +1,7 @@
 <% @contacts.each do |contact| %>
-  <div class="contact-card">
+  <div class="contact-card" data-controller="flip-card" data-action="click->flip-card#flip">
     <div class="contact-card-inner">
-      <div class="contact-card-front">
+      <div class="contact-card-front" data-flip-card-target="front">
         <div class="contact-image">
           <% if contact.profile_picture.present? %>
           <%= image_tag(contact.profile_picture, class: "avatar-large") %>
@@ -16,7 +16,7 @@
           <p><i class="fa-solid fa-phone fa-lg"></i> <%= contact.phone_number %></p>
         </div>
       </div>
-      <div class="contact-card-back">
+      <div class="contact-card-back hidden" data-flip-card-target="back">
           <div class="contact-versions">
             <%= render partial: "versions", locals: { contact: contact } %>
           </div>
