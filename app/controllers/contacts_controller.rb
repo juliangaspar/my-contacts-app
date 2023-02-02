@@ -34,8 +34,11 @@ class ContactsController < ApplicationController
   end
 
   def destroy
-    @contact.destroy
-    redirect_to contacts_path, notice: "Contact successfully deleted."
+    if @contact.destroy
+      redirect_to contacts_path, notice: "Contact successfully deleted."
+    else
+      redirect_to contacts_path, alert: "Contact could not be deleted."
+    end
   end
 
   def versions
