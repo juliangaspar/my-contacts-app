@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  margin: 5rem auto;
 }
 
 .form-container .form-card {
@@ -25,15 +26,7 @@
 }
 
 .form-container .form-card .form-actions .btn {
-  margin-top: 16px;
-}
-
-.form-container .form-card .form-actions .btn:first-child {
-  margin-top: 0;
-}
-
-.form-container .form-card .form-actions .btn:last-child {
-  margin-bottom: 0;
+  margin-top: 1rem;
 }
 
 .form-control {
