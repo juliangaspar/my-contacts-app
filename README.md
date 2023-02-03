@@ -2,6 +2,8 @@
 
 This is a Ruby on Rails app for performing CRUD (Create, Read, Update, and Delete) actions on contacts. It uses the Devise gem for authentication and PostgreSQL database for storage.
 
+Check it out here: [ContactApp](https://my-contact-app.herokuapp.com/)
+
 ## Prerequisites
 
 - Ruby 2.6.5 or later
