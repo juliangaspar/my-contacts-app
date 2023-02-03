@@ -1,5 +1,13 @@
 <div class="container-fluid">
-  <div class="cards">
-      <%= render partial: 'contacts', locals: { contact: @contacts } %>
-  </div>
+  <% if @contacts.empty? %>
+    <div class="cards-title">
+      <h4>Your agenda is empty</h4>
+      <p>Add your first contact</p>
+      <%= link_to new_contact_path do %> <i class="fa-regular fa-plus btn-ghost"></i> <% end %>
+    </div>
+  <% else %>
+    <div class="cards">
+        <%= render partial: 'contacts', locals: { contact: @contacts } %>
+    </div>
+  <% end %>
 </div>
