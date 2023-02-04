@@ -43,4 +43,17 @@ RSpec.describe Contact, :type => :model do
     subject.contact_email = "example@example.com"
     expect(subject).to be_valid
   end
+
+  it "is associated with a user" do
+    expect(subject.user).to eq(user)
+  end
+
+  it "is not valid without a user" do
+    subject.user = nil
+    expect(subject).to_not be_valid
+  end
+
+  it "returns contact full name when combining first name and last name" do
+    expect(subject.full_name).to eq("Juliana García")
+  end
 end
