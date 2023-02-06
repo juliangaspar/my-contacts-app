@@ -72,6 +72,8 @@ gem "dotenv-rails", groups: [:development, :test]
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  # RSpec testing framework
+  gem 'rspec-rails', ">= 3.9.0"
   # Helper for writing factories for testing
   gem "factory_bot_rails"
 end
@@ -88,8 +90,6 @@ group :development do
 end
 
 group :test do
-  # RSpec testing framework
-  gem 'rspec-rails', ">= 3.9.0"
   # Capybara for feature testing
   gem "capybara"
   # Provide support to interact with the browser
