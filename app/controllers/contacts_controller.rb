@@ -18,7 +18,7 @@ class ContactsController < ApplicationController
     if @contact.save
       redirect_to contacts_path, notice: "Contact successfully created."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -29,13 +29,13 @@ class ContactsController < ApplicationController
     if @contact.update(contact_params)
       redirect_to contacts_path, notice: "Contact successfully updated."
     else
-      render 'edit'
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
     if @contact.destroy
-      redirect_to contacts_path, notice: "Contact successfully deleted."
+      redirect_to contacts_path, notice: "Contact successfully deleted.", status: :see_other
     else
       redirect_to contacts_path, alert: "Contact could not be deleted."
     end
