@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Contact, :type => :model do
+RSpec.describe Contact, type: :model do
   user = User.create(first_name: "Julián", last_name: "Gaspar", email: "julian@gaspar.com", password: "123456")
   subject {
     Contact.new(first_name: "Juliana",
