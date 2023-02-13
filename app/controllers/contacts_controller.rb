@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: %i[show edit update destroy versions]
+  before_action :authorize_user, only: %i[show edit update destroy]
 
   def index
     @contacts = current_user.contacts.order(first_name: :asc, last_name: :asc)
@@ -53,5 +54,11 @@ class ContactsController < ApplicationController
 
   def set_contact
     @contact = Contact.find(params[:id])
+  end
+
+  def authorize_user
+    unless @contact.user == current_user
+      redirect_to root_url, alert: "Access denied."
+    end
   end
 end
