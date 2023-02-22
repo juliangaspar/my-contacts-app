@@ -13,8 +13,8 @@ class Contact < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_contact,
-    against: %i[first_name last_name contact_email phone_number],
+    against: %i[first_name last_name contact_email phone_number job_title company],
     using: {
-    tsearch: { prefix: true }
+      tsearch: { prefix: true }
     }
 end

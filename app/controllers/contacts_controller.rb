@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
   def index
     @contacts = current_user.contacts.order(first_name: :asc, last_name: :asc)
     if params[:query].present?
-      @contacts = Contact.search_by(params[:query])
+      @contacts = Contact.search_by_contact(params[:query])
     else
       @contacts = Contact.all
     end
