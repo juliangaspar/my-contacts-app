@@ -1,0 +1,12 @@
+<div class="search-form">
+<%= simple_form_for :search, url: contacts_path, method: :get do |f| %>
+  <div class="search-form-control">
+      <%= text_field_tag :query,
+      params[:query],
+      placeholder: ""%>
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+<% end %>
+</div>

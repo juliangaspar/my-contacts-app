@@ -6,6 +6,7 @@
       <%= link_to new_contact_path do %> <i class="fa-regular fa-plus btn-ghost"></i> <% end %>
     </div>
   <% else %>
+    <%= render 'shared/search-bar' %>
     <div class="cards">
         <%= render partial: 'contacts', locals: { contact: @contacts } %>
     </div>
